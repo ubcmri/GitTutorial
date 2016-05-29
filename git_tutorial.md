@@ -5,6 +5,7 @@ To make everything as easy as possible we need to follow a few simple steps. Sta
 ```
 ssh-keygen -t rsa -b 4096 -C "your_name@youremail.com"
 ```
+(If there already is a ssh key stored you can either overwrite it by pressing *y*. If you know you need the other ssh key for something else please look at the more advanced github tutorial).
 It will now ask you where to save the file. Chose default by pressing `enter`. It will then ask you for a passphrase, we will leave this blank. To set this press `enter` twice. Now we add this ssh key to the ssh-agent by
 ```
 ssh-add ~/.ssh/id_rsa
