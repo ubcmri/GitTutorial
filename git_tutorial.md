@@ -1,4 +1,4 @@
-# Test
+# Getting started with Github
 
 ## Setup
 To make everything as easy as possible we need to follow a few simple steps. Start by generating a ssh key for the computer you work on. This is unique to every computer you work on.
