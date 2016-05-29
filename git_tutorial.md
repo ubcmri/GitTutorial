@@ -1,5 +1,6 @@
 # Test
 
-'''
-some code
-'''
+To get started you write
+`
+git clone repo
+`
