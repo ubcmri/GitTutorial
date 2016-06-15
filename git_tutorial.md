@@ -69,7 +69,7 @@ The is now a record of the state of this project at this point in time. If we ev
 ```
 > git log
 ```
-and you'll see somthing like
+and you'll see something like
 ```
 commit a54b0265456f976a570839dc20ed0c7c28e1c071
 Author: Mike Jarrett <msjarrett@gmail.com>
@@ -118,6 +118,31 @@ Finally, we'll push the changes we've made in our local directory to the remote 
 > git push origin master
 ```
 In this command, "push" means copy your commit history to the remote host ("origin") on the branch "master". "Master" is the name of the default branch. We'll talk more about branches shortly.
+
+## Branches
+
+Branches allow you to work on different aspects of a project separately, get different features working separately and merge the branches back together.
+
+The default branch for each project is called "master", but you can make your own. We'll make a new branch to add some python code to our project.
+
+```
+git checkout -b python_test
+```
+
+"Checkout" is the command that allows you to switch between branches. The -b flag tells git to create a new branch called "python_test". You can see which branch you're currently on by typing
+```
+git branch
+```
+and switch between branches with ```git checkout {branch}```
+Switching between branches changes the files in the project directory so be careful! Git will warn you if you have uncommited changes before switching branches, you should listen to it!
+
+Add a new file called helloworld2.py
+```
+#!/usr/bin/python
+
+print "Hello again, world!"
+```
+
 
 
 
