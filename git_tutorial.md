@@ -47,7 +47,7 @@ By typing "ls -a" you should now see a hidden folder called "./.git". Your local
 
 Here we're initializing a git repo in an empty directory to start a new project, but you can do the same thing in a directory that already has lots of scripts in it!
 
-### Add files to your repo
+### Add files and commit
 You should have a README in your project to tell other users (and yourself) what this project is about. Using your favorite text editor, open a file called README.md and enter a description of this project such as
 ```
 # myfirstrepo
@@ -119,30 +119,39 @@ Finally, we'll push the changes we've made in our local directory to the remote 
 ```
 In this command, "push" means copy your commit history to the remote host ("origin") on the branch "master". "Master" is the name of the default branch. We'll talk more about branches shortly.
 
-## Branches
+## Using branches
 
 Branches allow you to work on different aspects of a project separately, get different features working separately and merge the branches back together.
 
 The default branch for each project is called "master", but you can make your own. We'll make a new branch to add some python code to our project.
 
 ```
-git checkout -b python_test
+> git checkout -b myfeature
 ```
 
-"Checkout" is the command that allows you to switch between branches. The -b flag tells git to create a new branch called "python_test". You can see which branch you're currently on by typing
+"Checkout" is the command that allows you to switch between branches. The -b flag tells git to create a new branch called "myfeature". You can see which branch you're currently on by typing
 ```
-git branch
+> git branch
 ```
 and switch between branches with ```git checkout {branch}```
 Switching between branches changes the files in the project directory so be careful! Git will warn you if you have uncommited changes before switching branches, you should listen to it!
 
-Add a new file called helloworld2.py
+Let's make a change in our script in the new branch by adding an argument:
 ```
-#!/usr/bin/python
+#!/bin/bash
+name=$1
+print "Hello ${name}!"
+```
+Once you test that your new feature is working, we want to include the changes back into the master branch.
 
-print "Hello again, world!"
+```
+> git checkout master
 ```
 
+You're now back on the master branch (double check by typing ```git branch``` and by looking at the content of your script). To combine the changes from the feature branch into the master branch, type
+```
+> git merge myfeature
+```
 
 
 
