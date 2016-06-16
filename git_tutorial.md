@@ -153,6 +153,10 @@ You're now back on the master branch (double check by typing ```git branch``` an
 > git merge myfeature
 ```
 
+You've now merged your feature into the master branch! If you wanted to you could delete your feature branch (we'll keep it for now). This merge was trivial since it just added the more recent changes. This is called a "fast forward merge". More complicated merges occur when concurrent changes have been made to the master and feature branches. 
+
+If your merge cannot be resolved by git trivially, it will tell you so when you try to run git merge. Your file(s) that have conflicts between the feature and master branches will be marked up by git pointing out where the conflicts are. You can go in and fix the conflicts by hand or use a graphical tool ("mergetool") to help
+
 
 
 
