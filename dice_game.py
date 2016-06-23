@@ -2,7 +2,7 @@ import random
 
 # Let's play dice against the computer!
 # In this simple implementation both you and computer throw the 
-# dice and guess how many eyes that will show up.
+# dice and guess the sum.
 # If you loose, you loose one point, if you win you gain 
 # the as many coins as the number of eyes you guess. 
 # Let's beat the machine!
@@ -24,14 +24,14 @@ def computer_guess(ndice):
 	return random.randint(ndice, 6*ndice)
 
 def player_guess(ndice):
-	return input('Guess the sum of the no of eyes' \
+	return input('Guess the sum of the two dice' \
 		'in the next throw: ')
 
 ################ EDIT 3 ################
 # Delete the function above and replace with the one below
 # def player_guess(ndice):
 # 	while True:
-# 		guess = input('Guess the sum of the no of eyes' \
+# 		guess = input('Guess the sum of the two dice' \
 # 			'in the next throw: ')
 # 		if guess < ndice:
 # 			print 'You guessed %d but there are %d dice.' \
