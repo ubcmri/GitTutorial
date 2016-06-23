@@ -2,6 +2,21 @@
 
 Each team makes their own edits and by pushing it all to the local repository we will see how it all comes together
 
+## New Tutorial
+1. Create a new repository on your personal github page. Follow guide here: https://help.github.com/articles/create-a-repo/
+2. Clone the repository: https://help.github.com/articles/cloning-a-repository/
+3. Add in a new file by downloading the following python game (download link)
+4. Try running the game (and beat the computer) by typing
+```
+python dice_game.py
+```
+5. Now your task is to make this game a little bit more interesting. Start of by making a new branch that we will call: `develop`.
+6. The code have 6 edits commented out of the code. Go through the code and uncomment the edits one by one. Make a commit after each edit that you comment out and write in the commit message.
+7. When you are all done, push your changes to Github and go online. 
+8. Notice now how there are two branches in your repository and that the repo content change if you switch branch!
+9. Next, make a pull request!
+
+
 ## How to:
 - Navigate using the terminal to the place where you want to put the git repo
 - Clone the local Github repo
