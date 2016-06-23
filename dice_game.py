@@ -78,8 +78,8 @@ def play(nrounds, ndice=2):
 		winner = 'You'
 	print winner, 'won!'
 
-	################ EDIT 5 ################
-	#Remove the rows above
+	################ EDIT 4 ################
+	# Remove the rows above!
 	# if computer_capital < player_capital:
 	# 	print 'You Win!'
 	
@@ -97,11 +97,11 @@ def play(nrounds, ndice=2):
 
 
 def main():
-	################ EDIT 2 ################
+	################ EDIT 1 ################
 	# welcome_banner()
 	########################################
 
-	################ EDIT 6 ################
+	################ EDIT 2 ################
 	# nrounds = int(raw_input('How many rounds shall we play: '))
 	# play(nrounds)
 	########################################
