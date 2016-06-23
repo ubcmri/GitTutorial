@@ -78,21 +78,19 @@ def play(nrounds, ndice=2):
 		winner = 'You'
 	print winner, 'won!'
 
-	################ EDIT 4 ################
-	# if computer_capital > player_capital:
-	# 	ans = raw_input('Do you want a rematch (y/n): ')
-	# 	if ans == 'y':
-	# 		print "\n"
-	# 		main()
-	########################################
-
 	################ EDIT 5 ################
-	# if computer_capital > player_capital:
+	# Remove the rows above
+	# if computer_capital < player_capital:
+	#	print 'You Win!'
+	#
+	# elif computer_capital > player_capital:
 	# 	print 'Machine Wins!'
-	# elif computer_capital < player_capital:
-	# 	print 'You win!'
 	# else:
 	# 	print 'Tie!'
+	# ans = raw_input('Do you want a rematch (y/n): ')
+	# if ans == 'y':
+	# 	print "Let's go again! \n"
+	# 	main()
 	########################################
 
 
