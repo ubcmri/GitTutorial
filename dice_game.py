@@ -79,17 +79,19 @@ def play(nrounds, ndice=2):
 	print winner, 'won!'
 
 	################ EDIT 5 ################
-	# Remove the rows above
+	#Remove the rows above
 	# if computer_capital < player_capital:
-	#	print 'You Win!'
-	#
+	# 	print 'You Win!'
+	
 	# elif computer_capital > player_capital:
 	# 	print 'Machine Wins!'
+
 	# else:
 	# 	print 'Tie!'
+
 	# ans = raw_input('Do you want a rematch (y/n): ')
 	# if ans == 'y':
-	# 	print "Let's go again! \n"
+	# 	print "\n - Let's go again! - \n"
 	# 	main()
 	########################################
 
@@ -107,4 +109,6 @@ def main():
 	play(2) 
 
 # Run the game!
-main()
+if __name__ == "__main__":
+    # execute only if run as a script
+    main()
