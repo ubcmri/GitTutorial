@@ -17,7 +17,7 @@ Add in a new file by downloading the following python game https://www.dropbox.c
 git add dice_game.py
 ```
 
-In this game you are trying to beat the computer in a simple dice rolling game. You guess the number of eyes and the computer does the same. Every time you guess wrong you loose money. The first to loose all their money loses the game. Try running the game (and beat the computer) by typing
+In this game you are trying to beat the computer in a simple dice rolling game. You guess the number sum of two dice and the computer does the same. Every time you guess wrong you loose money. The first to loose all their money loses the game. Try running the game (and beat the computer) by typing
 ```
 python dice_game.py
 ```
