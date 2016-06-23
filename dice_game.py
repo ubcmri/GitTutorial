@@ -8,7 +8,7 @@ import random
 # Let's beat the machine!
 
 
-# Team 3
+# --- EDIT ---
 # def welcome_banner():
 #     print '-------------------------------------'
 #     print '- - - Man vs. Machine Dice Game - - -'
@@ -25,7 +25,7 @@ def player_guess(ndice):
 	return input('Guess the sum of the no of eyes' \
 		'in the next throw: ')
 
-# Team 4
+# --- EDIT ---
 # def player_guess(ndice):
 # 	while True:
 # 		guess = input('Guess the sum of the no of eyes' \
@@ -75,14 +75,14 @@ def play(nrounds, ndice=2):
 		winner = 'You'
 	print winner, 'won!'
 
-	# Team 6
+	# --- EDIT ---
 	# if computer_capital > player_capital:
 	# 	ans = raw_input('Do you want a rematch (y/n): ')
 	# 	if ans == 'y':
 	# 		print "\n"
 	# 		main()
 
-	# Team 5
+	# --- EDIT ---
 	# if computer_capital > player_capital:
 	# 	print 'Machine Wins!'
 	# elif computer_capital < player_capital:
@@ -92,10 +92,10 @@ def play(nrounds, ndice=2):
 
 
 def main():
-	# Team 3
+	# --- EDIT ---
 	# welcome_banner()
 
-	# Team 2
+	# --- EDIT ---
 	# nrounds = int(raw_input('How many rounds shall we play: '))
 	# play(nrounds)
 
