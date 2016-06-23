@@ -8,11 +8,13 @@ import random
 # Let's beat the machine!
 
 
-# Team 3
+################ EDIT 1 ################
 # def welcome_banner():
 #     print '-------------------------------------'
 #     print '- - - Man vs. Machine Dice Game - - -'
 #     print '-------------------------------------\n'
+
+########################################
 
 def roll_dice_and_compute_sum(ndice):
 	return sum([random.randint(1, 6) \
@@ -25,7 +27,8 @@ def player_guess(ndice):
 	return input('Guess the sum of the no of eyes' \
 		'in the next throw: ')
 
-# Team 4
+################ EDIT 3 ################
+# Delete the function above and replace with the one below
 # def player_guess(ndice):
 # 	while True:
 # 		guess = input('Guess the sum of the no of eyes' \
@@ -40,7 +43,7 @@ def player_guess(ndice):
 # 			break
 
 # 	return guess
-
+########################################
 
 def play_one_round(ndice, capital, guess_function):
 	guess = guess_function(ndice)
@@ -75,29 +78,33 @@ def play(nrounds, ndice=2):
 		winner = 'You'
 	print winner, 'won!'
 
-	# Team 6
+	################ EDIT 4 ################
 	# if computer_capital > player_capital:
 	# 	ans = raw_input('Do you want a rematch (y/n): ')
 	# 	if ans == 'y':
 	# 		print "\n"
 	# 		main()
+	########################################
 
-	# Team 5
+	################ EDIT 5 ################
 	# if computer_capital > player_capital:
 	# 	print 'Machine Wins!'
 	# elif computer_capital < player_capital:
 	# 	print 'You win!'
 	# else:
 	# 	print 'Tie!'
+	########################################
 
 
 def main():
-	# Team 3
+	################ EDIT 2 ################
 	# welcome_banner()
+	########################################
 
-	# Team 2
+	################ EDIT 6 ################
 	# nrounds = int(raw_input('How many rounds shall we play: '))
 	# play(nrounds)
+	########################################
 
 	play(2) 
 
