@@ -1,6 +1,8 @@
 # Getting started with Github
 
 ## Setup
+
+### SSH keys
 To make everything as easy as possible we need to follow a few simple steps. Start by generating a ssh key for the computer you work on. This is unique to every computer you work on.
 ```
 ssh-keygen -t rsa -b 4096 -C "your_name@youremail.com"
@@ -25,6 +27,24 @@ cat ~/.ssh/id_rsa.pub
 This will type out the content of the ssh key in the terminal, a really long key with weird characters. Copy the content, including `ssh-rsa` all the way to your email adress at the end. Now past this into the `Key` box on your github account in the browser that is in the background. Finish by pressing `Add SSH key`.
 
 What we have done here allows you to pull and push data from private Github repos without typing in your password every time.
+
+### Configure Git
+Let's set up your git installation:
+```
+git config --global user.name <name>
+```
+Put in your full name. It will be attached to each commit you make so other users know who made them.
+
+```
+git config --global user.name <name>
+```
+Similarly, tell git your email address.
+
+```
+git config --global core.editor emacs
+```
+And, if you want, your favorite text editor.
+
 
 
 ## Create your first repo
@@ -119,6 +139,9 @@ Finally, we'll push the changes we've made in our local directory to the remote 
 ```
 In this command, "push" means copy your commit history to the remote host ("origin") on the branch "master". "Master" is the name of the default branch. We'll talk more about branches shortly.
 
+
+
+
 ## Using branches
 
 Branches allow you to work on different aspects of a project separately, get different features working separately and merge the branches back together.
@@ -153,7 +176,7 @@ You're now back on the master branch (double check by typing ```git branch``` an
 > git merge myfeature
 ```
 
-You've now merged your feature into the master branch! If you wanted to you could delete your feature branch (we'll keep it for now). This merge was trivial since it just added the more recent changes. This is called a "fast forward merge". More complicated merges occur when concurrent changes have been made to the master and feature branches. 
+You've now merged your feature into the master branch! If you wanted to you could delete your feature branch (we'll keep it for now). This merge was trivial since it just added the more recent changes. This is called a "fast forward merge". More complicated merges occur when concurrent changes have been made to the master and feature branches.
 
 If your merge cannot be resolved by git trivially, it will tell you so when you try to run git merge. Your file(s) that have conflicts between the feature and master branches will be marked up by git pointing out where the conflicts are. You can go in and fix the conflicts by hand or use a graphical tool ("mergetool") to help
 
