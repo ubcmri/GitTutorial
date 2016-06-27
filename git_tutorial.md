@@ -36,7 +36,7 @@ git config --global user.name <name>
 Put in your full name. It will be attached to each commit you make so other users know who made them.
 
 ```
-git config --global user.name <name>
+git config --global user.email <email>
 ```
 Similarly, tell git your email address.
 
@@ -163,9 +163,16 @@ Let's make a change in our script in the new branch by adding an argument:
 ```
 #!/bin/bash
 name=$1
-print "Hello ${name}!"
+echo "Hello ${name}!"
 ```
-Once you test that your new feature is working, we want to include the changes back into the master branch.
+
+Once you test that your new feature is working, commit your changes to the new branch:
+```
+git add helloworld.sh
+git commit -m "add custom name feature"
+```
+
+To include the changes back into the master branch.
 
 ```
 > git checkout master
@@ -181,48 +188,45 @@ You've now merged your feature into the master branch! If you wanted to you coul
 If your merge cannot be resolved by git trivially, it will tell you so when you try to run git merge. Your file(s) that have conflicts between the feature and master branches will be marked up by git pointing out where the conflicts are. You can go in and fix the conflicts by hand or use a graphical tool ("mergetool") to help
 
 
+## Updating your local repository
 
+We've already shown how to push your local commits to the central repo. But sometimes, changes will occur on the origin repo and your local repo become out of date. This could happen because
+* You pushed some changes from your laptop, and now want to make sure those changes are included on your desktop
+* A collaborator added a feature and pushed to origin since the last time you updated your local version.
 
-## Clone your first repo
-Open the terminal and navigate to where you want to keep your scripts. To get started and download a repo you use the `clone` command. Example with T2 analysis
-```
-> git clone -b develop git@github.com/ubcmri/T2_MWI.git
-```
-This have created a new folder in your current directory. Navigate to it
-```
-> cd T2_MWI
-```
-To see which branches currently exist write
-```
-> git branch
-* develop
-```
-As you can see, you only have one branch here. This is good, we want everyone to work on the develop branch.
+There are two main tools that will update your local repo, "fetch" and "pull".
 
-Now make some edits on your files. Then add and commit the changes
-```
-> git add myfile.txt
-> git commit -m 'Swedish translation'
-```
-At this stage, all changes you have made are local, let's get them to the central repo as well!
-```
-> git push
-```
-Now your changes have been pushed to the main repository.
+### Fetch
 
-The next time we start working on this we need to make sure we have the most current updates. To do this we `pull` the latest changes.
+To download all the branches from the central repo, run
 ```
-> git pull
+git fetch origin
+```
+Or, if you just want the latest version of a specific branch,
+```
+git fetch origin <branch>
+```
+The branches from origin are now accessible to you, but they behave slightly different than local branches. To see them, type
+```
+git branch -r
+```
+You can checkout these branches like normal using the "checkout" command, but it's not a good idea to commit changes to them. If you want to update changes from origin master branch to your local master branch,
+```
+git checkout master
+git merge origin/master
+```
+The benefit of using "fetch" is that it allows you to download the remote branches and examine them on your own computer before merging.
+
+### Pull
+
+If you're confident that you want to include the remote changes, you can combine the "fetch" and "merge" commands with "pull":
+```
+git pull origin master
 ```
 
-## Create your own feature branch
-Let's say you want to get started on your own feature locally, it is good to start your own branch. To do this type
+Instead of merging, you also have the option to "rebase". Rebasing essentially means tacking on your recent commits on top of whatever remote branch you want to synchronize with. This is handy because it saves the trouble of a merge and keeps the project history more straightforward. The important thing to remember is that since rebasing changes the history of a branch, it should never be used on public branches. To rebase, use the pull command as above but with the rebase option:
 ```
-> git branch my_feature
-> git checkout my_feature
+git pull --rebase origin master
 ```
-Now you are on your new feautre branch. The `checkout` command moves you to the new branch. Make some edits here, add and commit. Now we want to go back to the develop branch and merge our edits
-```
-> git checkout develop
-> git merge my_feature
-```
+
+Try both of these in your test repository and check ```git log``` to see the project history and how it differs in either case. For example, try editing the README.md file directly on the github interface, then update your local project to show the changes.
