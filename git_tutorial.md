@@ -49,7 +49,7 @@ And, if you want, your favorite text editor.
 
 ## Create your first repo
 
-### Initialize a local repos
+### Initialize a local repository
 
 Create a working directory where repositories you create or clone will live. This can be named anything. In the working directory, make a direcory called "myfirstrepo"
 ```
