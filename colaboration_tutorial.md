@@ -1,32 +1,53 @@
-# Hands on github tutorial
+# Hands on Github tutorial
 
-Each team makes their own edits and by pushing it all to the local repository we will see how it all comes together
+## Introduction
+By this time we hope you have somewhat of an idea of how git works but most importantly why we want to use it. To get this more into context you will do a small exercise that will teach you some of the most important aspects of the Github workflow. To facilitate this you will work on your own small project that will give you an idea of how the workflow works.
 
-## New Tutorial
-
-Create a new repository on your personal github page. Follow guide here: https://help.github.com/articles/create-a-repo/
-
-Clone the repository: https://help.github.com/articles/cloning-a-repository/. And in the terminal run:
-```
-git clone <url-to-repo-on-github>
-```
-
-Add in a new file in the folder on your computer where you cloned your git repository by downloading the following python game https://www.dropbox.com/s/o128wr5aggybrj8/dice_game.py?dl=0
-. Run `git status` and notice that there is an untracked file. Add it with 
-```
-git add dice_game.py
-```
-
-
-In this game you are trying to beat the computer in a simple dice rolling game. You guess the number sum of two dice and the computer does the same. Every time you guess wrong you loose money. The first to loose all their money loses the game. Try running the game (and beat the computer) by typing
+For clarification, most of the work in the exercise is done in the terminal. To reduce confusion, everything that you are suppose to run in the terminal is shown in code blocks like below:
 
 ```
-python dice_game.py
+> example of command you run in the terminal
 ```
 
-Now your task is to make this game a little bit more interesting. Start off by making a new branch that we will call: `game-improvement`.
+Things that you do in Github will be marked with :octocat:.
+
+### Learning goals
+- Setting up a new local git repository and sync it with Github
+- Understand the difference between git on your computer and Github
+- Know how to use git commands including: `clone`, `pull`, `push`, `add`, `commit`, `branch`, `merge`
+- Use Github online for viewing files and issue control
+- Understanding of the *feature branch workflow*
+
+## Exercise
+
+### Setting up a new Github repository
+(:octocat:) First, open your web browser and go to http://www.github.com. Now you want to create a new repository, i.e. a new project. Go to your profile on github and set up a new repository. If you can't find it, follow guide here: https://help.github.com/articles/create-a-repo/
+
+Managed to create a new repository (git slang *repo*)? Great! Then you want to get this project onto your computer, this is called cloning.
+
+Open up your terminal and navigate to the folder where you want to put your repo. Clone the repository by typing in the following command and substitute `<url-to-repo-on-github>` with the address to the repository that can be found on the repository page on Github (:octocat:)
 ```
-git checkout -b game-improvement
+> git clone <url-to-repo-on-github>
+```
+If you are having issues with this, have a look at the online help: https://help.github.com/articles/cloning-a-repository/.
+
+Great job setting up the repo on your computer! Now we want to put our project files into the folder. In this small exercise you will be working with a dice game written in python and your task will be to improve the functionality of the game.
+
+Copy the `dice_game.py` into the git repository on your computer. Either using the terminal or the windows on your desktop. Now run `git status` in your terminal and notice that there is an untracked file. To make this file a part of the project we need to add it using
+```
+> git add dice_game.py
+```
+
+In this very simple game you are trying to beat the computer in guessing the sum of two dice that you roll. You guess the sum of the two dice and the computer does the same. Every time you guess wrong you lose money. The first to lose all their money loses the game. Try running the game (and beat the computer) by typing
+
+```
+> python dice_game.py
+```
+
+### Time to branch out - Creating your first branch
+Your task is to make this game a little bit more interesting. Start off by making a new branch that we will call: `game-improvement`. The idea of creating a new branch is similar to making a copy of the file when you want to make some new adjustments to it in case you want to revert back to the previous version. With git we don't need to create a second copy of the file, with branches we can do the exact same thing!
+```
+> git checkout -b game-improvement
 ```
 
 Run `git branch` to see that you are on the right branch
@@ -36,32 +57,39 @@ Run `git branch` to see that you are on the right branch
 master
 ```
 
-Now we want to push this branch to Github. We do this using
+At this stage, this branch is only on your computer. No one else in the group know that you are working on this awesome new feature. To let people know what you are working on you can push this branch to Github. To do this, we need to tell git on your computer which branch to push and where. `origin` is the word we use for the shared repository on Github.
 ```
 git push origin game-improvement
 ```
-This tells git that we want to push this branch to github. After this we do not need to specify `origin game-improvement`
 
-The code have 6 different edits commented out of the code. Your job is now to go through the code and uncomment the edits one by one. After each edit you comment out make a commit. So the workflow will be the following
+This tells git that we want to push this branch to github. After this we do not need to specify `origin game-improvement` again for future commits.
 
-**NOTE!** Code in Python needs to be properly indented. After an `if` statement the code needs to be indented with one tab. Make sure there are no additional spaces as this will make the code to crash. 
+### Add and commit changes in the code
+Now that everything is set up it is time to make some edits in the code! This is the point where you would start development on your new feature on the script but in the interest of saving time I have prepared this for you already (yeah, cooking show style!).
 
-1. Uncomment one edit
+Open up the terminal and open the `dice_game.py` in your favorite text editor (sublime, atom, gedit, textedit, vim, vi (if you are hardcore coder), nano, just don't use word!). Scroll through the code and try to get an idea of what it does.
+
+The prepared edits are commented out of the code so your job will be to comment these out one by one. To simulate the real development process you will `commit` all changes you make.
+
+**NOTE!** Code in Python needs to be properly indented. After an `if` statement the code needs to be indented with one tab. Make sure there are no additional spaces as this will make the code to crash.
+
+So this is the process you will iterate through 4 times
+1. Find the edit and uncomment it. Note! Some edits require you to delete lines above the new code as well. So please have a look at the end of this document for further description of each edit.
 2. Stage the edit
 ```
-git add dice_game.py
+> git add dice_game.py
 ```
 3. Commit the edit
 ```
-git commit -m '<Descriptive message>'
+> git commit -m '<Descriptive message>'
 ```
 4. Push your edit to github
 ```
-git push
+> git push
 ```
-As further explanation to this push command, we need to specify that we want to push the edits on the `game-improvement` branch to github (origin).
 
-When all the edits are done it is time to make a pull request. In this step we put all our edits into the master version of the game. 
+
+(:octocat:) When all the edits are done it is time to make a pull request. In this step we put all our edits into the master version of the game.
 1. Go online to github and navigate to your repository containing the game
 2. Switch to the game-improvements branch.
 3. Click `New pull request` next to the branch name.
@@ -116,10 +144,11 @@ def player_guess(ndice):
 ### Edit 4
 - In the current implementation you will win if you both end up with the same score. Add the possibility for it all ending up in a tie. We also want to give the user a chance for a rematch in case he/she loses the game
 - Change the last part of `play()` to:
+
 ```
 if computer_capital < player_capital:
     print 'You Win!'
-    
+
 elif computer_capital > player_capital:
     print 'Machine Wins!'
 
@@ -132,4 +161,3 @@ if ans == 'y':
     main()
 ```
 - Again, don't forget to remove the code above that we don't want anymore.
-
