@@ -6,23 +6,23 @@ Each team makes their own edits and by pushing it all to the local repository we
 
 Create a new repository on your personal github page. Follow guide here: https://help.github.com/articles/create-a-repo/
 
-Clone the repository: https://help.github.com/articles/cloning-a-repository/
+Clone the repository: https://help.github.com/articles/cloning-a-repository/. And in the terminal run:
 ```
 git clone <url-to-repo-on-github>
 ```
 
-Add in a new file by downloading the following python game https://www.dropbox.com/s/o128wr5aggybrj8/dice_game.py?dl=0
+Add in a new file in the folder on your computer where you cloned your git repository by downloading the following python game https://www.dropbox.com/s/o128wr5aggybrj8/dice_game.py?dl=0
 . Run `git status` and notice that there is an untracked file. Add it with 
 ```
 git add dice_game.py
 ```
 
-In this game you are trying to beat the computer in a simple dice rolling game. You guess the number of eyes and the computer does the same. Every time you guess wrong you loose money. The first to loose all their money loses the game. Try running the game (and beat the computer) by typing
+In this game you are trying to beat the computer in a simple dice rolling game. You guess the number of eyes and the computer does the same. Every time you guess wrong you loose money. The first to lose all their money loses the game. Try running the game (and beat the computer) by typing
 ```
 python dice_game.py
 ```
 
-Now your task is to make this game a little bit more interesting. Start of by making a new branch that we will call: `game-improvement`.
+Now your task is to make this game a little bit more interesting. Start off by making a new branch that we will call: `game-improvement`.
 ```
 git checkout -b game-improvement
 ```
@@ -41,6 +41,8 @@ git push origin game-improvement
 This tells git that we want to push this branch to github. After this we do not need to specify `origin game-improvement`
 
 The code have 6 different edits commented out of the code. Your job is now to go through the code and uncomment the edits one by one. After each edit you comment out make a commit. So the workflow will be the following
+
+**NOTE!** Code in Python needs to be properly indented. After an `if` statement the code needs to be indented with one tab. Make sure there are no additional spaces as this will make the code to crash. 
 
 1. Uncomment one edit
 2. Stage the edit
