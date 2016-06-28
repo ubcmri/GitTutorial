@@ -11,6 +11,8 @@ For clarification, most of the work in the exercise is done in the terminal. To 
 
 Things that you do in Github will be marked with :octocat:.
 
+In this tutorial you will use a workflow very similar to the [feature branch workflow](feature_branch_workflow.md). The workflow won't be explicitly specified in this tutorial but please refer to the document linked above.
+
 ### Learning goals
 - Setting up a new local git repository and sync it with Github
 - Understand the difference between git on your computer and Github
