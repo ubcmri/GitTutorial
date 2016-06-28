@@ -35,10 +35,7 @@ If you are having issues with this, have a look at the online help: https://help
 
 Great job setting up the repo on your computer! Now we want to put our project files into the folder. In this small exercise you will be working with a dice game written in python and your task will be to improve the functionality of the game.
 
-Copy the `dice_game.py` into the git repository on your computer. Either using the terminal or the windows on your desktop. Now run `git status` in your terminal and notice that there is an untracked file. To make this file a part of the project we need to add it using
-```
-> git add dice_game.py
-```
+Copy the [`dice_game.py`](dice_game.py) into the git repository on your computer. The python file can be found in the GitTutorial repository. Either using the terminal or the windows on your desktop. Now run `git status` in your terminal and notice that there is an untracked file. We will fix this later when we make edits to the file.
 
 In this very simple game you are trying to beat the computer in guessing the sum of two dice that you roll. You guess the sum of the two dice and the computer does the same. Every time you guess wrong you lose money. The first to lose all their money loses the game. Try running the game (and beat the computer) by typing
 
