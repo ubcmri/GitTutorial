@@ -72,17 +72,21 @@ The prepared edits are commented out of the code so your job will be to comment 
 
 **NOTE!** Code in Python needs to be properly indented. After an `if` statement the code needs to be indented with one tab. Make sure there are no additional spaces as this will make the code to crash.
 
-So this is the process you will iterate through 4 times
-1. Find the edit and uncomment it. Note! Some edits require you to delete lines above the new code as well. So please have a look at the end of this document for further description of each edit.
-2. Stage the edit
+So this is the process you will iterate through for each edit (**Note!** Some edits require you to delete lines above the new code as well. So please have a look at the end of this document for further description of each edit.)
+
+- Find the edit and uncomment it. 
+
+- Stage the edit
 ```
 > git add dice_game.py
 ```
-3. Commit the edit
+
+- Commit the edit
 ```
 > git commit -m '<Descriptive message>'
 ```
-4. Push your edit to github
+
+- Push your edit to github
 ```
 > git push
 ```
