@@ -23,7 +23,7 @@ In this tutorial you will use a workflow very similar to the [feature branch wor
 ## Exercise
 
 ### Setting up a new Github repository
-(:octocat:) First, open your web browser and go to http://www.github.com. Now you want to create a new repository, i.e. a new project. Go to your profile on github and set up a new repository. If you can't find it, follow guide here: https://help.github.com/articles/create-a-repo/
+(:octocat:) First, open your web browser and go to http://www.github.com. At this point Mike should already have shown you how to create a repository on your Github profile. If you have done that alread, skip to the next paragraph, if not, continue reading. Now you want to create a new repository, i.e. a new project. Go to your profile on github and set up a new repository. If you can't find it, follow guide here: https://help.github.com/articles/create-a-repo/
 
 Managed to create a new repository (git slang *repo*)? Great! Then you want to get this project onto your computer, this is called cloning.
 
