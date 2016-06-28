@@ -58,7 +58,7 @@ master
 
 At this stage, this branch is only on your computer. No one else in the group know that you are working on this awesome new feature. To let people know what you are working on you can push this branch to Github. To do this, we need to tell git on your computer which branch to push and where. `origin` is the word we use for the shared repository on Github.
 ```
-git push origin game-improvement
+git push -u origin game-improvement
 ```
 
 This tells git that we want to push this branch to github. After this we do not need to specify `origin game-improvement` again for future commits.
