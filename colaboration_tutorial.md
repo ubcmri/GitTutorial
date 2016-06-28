@@ -89,7 +89,8 @@ So this is the process you will iterate through 4 times
 ```
 
 
-(:octocat:) When all the edits are done it is time to make a pull request. In this step we put all our edits into the master version of the game.
+(:octocat:) When all the edits are done it is time to make what is called a pull request. In this step we put all our edits into the master version of the game.
+
 1. Go online to github and navigate to your repository containing the game
 2. Switch to the game-improvements branch.
 3. Click `New pull request` next to the branch name.
@@ -99,7 +100,7 @@ So this is the process you will iterate through 4 times
 7. After you create a pull request a discussion thread is opened where users can discuss the changes and potentially make additionally changes to the branch before merging.  
 8. In this simple case, just click `Merge pull request` and then `Confirm merge`.
 9. At this stage we can delete the `game-improvement` branch.
-10. Congratulations!
+10. Congratulations! You did it!
 
 
 ## Description of the edits
